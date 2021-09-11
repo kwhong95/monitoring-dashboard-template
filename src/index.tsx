@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import GlobalStyle from './global-style';
-import { AppContainer } from './elements';
+import { AppContainer, Background } from './elements';
 
 // Screen
 import ScreenSaver from './screen/screen-saver';
@@ -60,6 +60,7 @@ const App = () => {
   return (
     <AppContainer onClick={appTouched}>
       <GlobalStyle />
+      <Background />
       {screensaverActive && screensaverVisible && (
         <ScreenSaver onClick={screensaverClicked} />
       )}
