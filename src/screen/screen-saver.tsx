@@ -1,12 +1,14 @@
+import { Container } from './screen-elements';
+
 interface ScreenSaverProps {
   onClick: () => void
 }
 
 const ScreenSaver: React.FC<ScreenSaverProps> = ({ onClick }) => {
   return (
-    <div onClick={onClick}>
+    <Container onClick={onClick}>
       SCREEN SAVER
-    </div>
+    </Container>
   )
 }
 
