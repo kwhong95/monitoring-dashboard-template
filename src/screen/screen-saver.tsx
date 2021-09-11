@@ -1,4 +1,5 @@
 import { Container } from './screen-elements';
+import ItemList from '../components/item-list';
 
 interface ScreenSaverProps {
   onClick: () => void
@@ -7,7 +8,7 @@ interface ScreenSaverProps {
 const ScreenSaver: React.FC<ScreenSaverProps> = ({ onClick }) => {
   return (
     <Container onClick={onClick}>
-      SCREEN SAVER
+      <ItemList />
     </Container>
   )
 }

@@ -7,6 +7,4 @@ export const Container = styled.section`
   height: 100%;
   color: #fff;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 `;
