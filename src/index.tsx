@@ -4,6 +4,7 @@ import GlobalStyle from './global-style';
 import { AppContainer, Background } from './elements';
 
 // Screen
+import ScreenMain from './screen/screen-main';
 import ScreenSaver from './screen/screen-saver';
 
 
@@ -61,9 +62,11 @@ const App = () => {
     <AppContainer onClick={appTouched}>
       <GlobalStyle />
       <Background />
-      {screensaverActive && screensaverVisible && (
+      {screensaverActive && screensaverVisible ? 
         <ScreenSaver onClick={screensaverClicked} />
-      )}
+        :
+        <ScreenMain />  
+      }
     </AppContainer>
   );
 }
