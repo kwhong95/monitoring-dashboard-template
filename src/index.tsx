@@ -1,8 +1,14 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
+import GlobalStyle from './global-style';
+import { AppContainer } from './elements';
+
+// Screen
+import ScreenSaver from './screen/screen-saver';
+
 
 const SCREENSAVER_DELAY_MS = 3000;
-const SCREENSAVER_ACTIVE_TIME_MS = 7000;
+const SCREENSAVER_ACTIVE_TIME_MS = 10000000000;
 const SCREENSAVER_INACTIVE_TIME_MS = 5000;
 
 const App = () => {
@@ -52,34 +58,14 @@ const App = () => {
   }, []);
 
   return (
-    <main onClick={appTouched}>
+    <AppContainer onClick={appTouched}>
+      <GlobalStyle />
       {screensaverActive && screensaverVisible && (
-        <div
-          id="screensaver"
-          style={styles.screensaver as any}
-          onClick={screensaverClicked}
-        >
-          SCREENSAVER
-        </div>
+        <ScreenSaver onClick={screensaverClicked} />
       )}
-    </main>
+    </AppContainer>
   );
 }
 
-const styles = {
-  screensaver: {
-    position: "fixed",
-    left: 0,
-    top: 0,
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(100, 100, 150, 0.92)",
-    fontSize: 32,
-    color: "white"
-  }
-};
 
 ReactDOM.render(<App />, document.querySelector("#root"));

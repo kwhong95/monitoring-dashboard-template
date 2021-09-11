@@ -1,5 +1,13 @@
-const ScreenSaver = () => {
-  return <h1>Screen Saver</h1>
+interface ScreenSaverProps {
+  onClick: () => void
+}
+
+const ScreenSaver: React.FC<ScreenSaverProps> = ({ onClick }) => {
+  return (
+    <div onClick={onClick}>
+      SCREEN SAVER
+    </div>
+  )
 }
 
 export default ScreenSaver;
