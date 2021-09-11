@@ -1,3 +1,4 @@
+import ButtonList from '../components/button-list';
 import { 
   Container, 
   Header,
@@ -14,6 +15,7 @@ const ScreenMain: React.FC = () => {
         <Divider />
         <AppName>도장부스 모니터링</AppName>
       </Header>
+      <ButtonList />
     </Container>
   );
 }
