@@ -1,4 +1,4 @@
-interface IData {
+export interface IData {
   title: string;
   payload: number;
   unit: string;
