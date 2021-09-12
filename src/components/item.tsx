@@ -2,19 +2,18 @@ import {
   ItemWrap, 
   Header,
   TitleWrap,
-  Icon,
   Text,
   Unit,
   Payload
 } from './elements';
 import { IData } from '../state/mock-data';
 
-const Item: React.FC<IData> = ({ title, payload, unit, src }) => {
+const Item: React.FC<IData> = ({ title, payload, unit, Icon }) => {
   return (
     <ItemWrap>
       <Header>
         <TitleWrap>
-          <Icon src={src} />
+          <Icon />
           <Text>{title}</Text>
         </TitleWrap>
         <Unit>{unit}</Unit>

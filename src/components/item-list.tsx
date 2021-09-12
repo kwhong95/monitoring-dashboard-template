@@ -11,7 +11,7 @@ const ItemList: React.FC = () => {
         title={item.title}
         payload={item.payload}
         unit={item.unit} 
-        src={item.src}
+        Icon={item.Icon}
        />)}
     </ItemListWrap>
   );
