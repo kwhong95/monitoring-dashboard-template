@@ -9,12 +9,12 @@ import {
 } from './elements';
 import { IData } from '../state/mock-data';
 
-const Item: React.FC<IData> = ({ title, payload, unit }) => {
+const Item: React.FC<IData> = ({ title, payload, unit, src }) => {
   return (
     <ItemWrap>
       <Header>
         <TitleWrap>
-          {/* <Icon /> */}
+          <Icon src={src} />
           <Text>{title}</Text>
         </TitleWrap>
         <Unit>{unit}</Unit>

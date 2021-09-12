@@ -27,7 +27,10 @@ export const Header = styled.div`
 
 export const TitleWrap = styled.div``;
 
-export const Icon = styled.img``;
+export const Icon = styled.img`
+  width: 50px;
+  height: 50px;
+`;
 
 export const Text = styled.h3`
   color: #fff;
