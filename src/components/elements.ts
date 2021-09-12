@@ -23,22 +23,37 @@ export const ItemWrap = styled.div`
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
 `;
 
-export const TitleWrap = styled.div``;
+export const TitleWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
 
 export const Icon = styled.img`
   width: 50px;
   height: 50px;
 `;
 
-export const Text = styled.h3`
+export const Text = styled.h2`
   color: #fff;
 `;
 
-export const Unit = styled.p``;
+export const Unit = styled.p`
+  font-size: 30px;
+  font-weight: 600;
+  color: gray;
+`;
 
-export const Payload = styled.div``;
+export const Payload = styled.div`
+  text-align: center;
+  font-weight: 700;
+  font-size: 120px;
+`;
 
 
 /* Button List */

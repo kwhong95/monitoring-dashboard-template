@@ -13,7 +13,7 @@ const Item: React.FC<IData> = ({ title, payload, unit, Icon }) => {
     <ItemWrap>
       <Header>
         <TitleWrap>
-          <Icon />
+          <Icon fill="#fff" width="30" height="30" />
           <Text>{title}</Text>
         </TitleWrap>
         <Unit>{unit}</Unit>
