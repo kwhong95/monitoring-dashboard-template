@@ -24,7 +24,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
 `;
 
 export const TitleWrap = styled.div`
@@ -41,6 +41,8 @@ export const Icon = styled.img`
 
 export const Text = styled.h2`
   color: #fff;
+  margin-top: .3em;
+  font-size: 32px;
 `;
 
 export const Unit = styled.p`
@@ -69,11 +71,12 @@ export const ButtonListWrap = styled.div`
 
 export const ButtonWrap = styled.button`
   background-color: rgba(0, 0, 0, 0.3);
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
+  gap: 10px;
 `;

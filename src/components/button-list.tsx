@@ -5,7 +5,12 @@ import { ButtonListWrap } from './elements';
 const ButtonList: React.FC = () => {
   return (
     <ButtonListWrap>
-      {MockData.map((item, idx) => <Button key={idx} title={item.title} />)}
+      {MockData.map((item, idx) => 
+      <Button 
+        key={idx} 
+        title={item.title} 
+        Icon={item.Icon} 
+      />)}
     </ButtonListWrap>
   );
 }
