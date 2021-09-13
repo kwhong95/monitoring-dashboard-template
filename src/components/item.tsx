@@ -6,9 +6,15 @@ import {
   Unit,
   Payload
 } from './elements';
-import { IData } from '../state/mock-data';
 
-const Item: React.FC<IData> = ({ title, payload, unit, Icon }) => {
+interface ItemProps {
+  title: string;
+  payload: number;
+  unit: string;
+  Icon: any;
+}
+
+const Item: React.FC<ItemProps> = ({ title, payload, unit, Icon }) => {
   return (
     <ItemWrap>
       <Header>

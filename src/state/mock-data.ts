@@ -7,6 +7,7 @@ export interface IData {
   payload: number;
   unit: string;
   Icon: any;
+  to: string;
 }
 
 export const MockData: IData[] = [
@@ -14,24 +15,28 @@ export const MockData: IData[] = [
     title: "차압계",
     payload: 37.06,
     unit: "mmAQ",
-    Icon: Gauage
+    Icon: Gauage,
+    to: "/pressure",
   },
   {
     title: "배풍기",
     payload: 13.48,
     unit: "A",
-    Icon: BigElecFan
+    Icon: BigElecFan,
+    to: "/fan",
   },
   {
     title: "송풍기",
     payload: 7.11,
     unit: "A",
-    Icon: BigElecFan
+    Icon: BigElecFan,
+    to: "/blower"
   },
   {
     title: "온도",
     payload: 37.2,
     unit: "˚C",
-    Icon: Temp
+    Icon: Temp,
+    to: "/temp"
   }
 ]

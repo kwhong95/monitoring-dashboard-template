@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import GlobalStyle from './global-style';
 import { AppContainer, Background } from './elements';
 
@@ -62,11 +63,13 @@ const App = () => {
     <AppContainer onClick={appTouched}>
       <GlobalStyle />
       <Background />
-      {screensaverActive && screensaverVisible ? 
-        <ScreenSaver onClick={screensaverClicked} />
-        :
-        <ScreenMain />  
-      }
+      <BrowserRouter>
+        {screensaverActive && screensaverVisible ? 
+          <ScreenSaver onClick={screensaverClicked} />
+          :
+          <ScreenMain />  
+        }
+      </BrowserRouter>
     </AppContainer>
   );
 }

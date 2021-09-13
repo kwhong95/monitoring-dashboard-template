@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 /* Item List */
@@ -34,11 +35,6 @@ export const TitleWrap = styled.div`
   gap: 10px;
 `;
 
-export const Icon = styled.img`
-  width: 50px;
-  height: 50px;
-`;
-
 export const Text = styled.h2`
   color: #fff;
   margin-top: .3em;
@@ -69,7 +65,7 @@ export const ButtonListWrap = styled.div`
 
 /* button */
 
-export const ButtonWrap = styled.button`
+export const ButtonWrap = styled(Link)`
   background-color: rgba(0, 0, 0, 0.3);
   width: 150px;
   height: 150px;
@@ -79,4 +75,5 @@ export const ButtonWrap = styled.button`
   align-items: center;
   border: none;
   gap: 10px;
+  text-decoration: none;
 `;
