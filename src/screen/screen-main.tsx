@@ -1,6 +1,8 @@
+import { Route,Switch } from 'react-router';
 import ButtonList from '../components/button-list';
-import { 
-  Container, 
+import Detail from '../components/detail';
+import {
+  Container,
   Header,
   CompanyName,
   AppName,
@@ -15,7 +17,10 @@ const ScreenMain: React.FC = () => {
         <Divider />
         <AppName>도장부스 모니터링</AppName>
       </Header>
-      <ButtonList />
+      <Switch>
+        <Route exact path="/" component={ButtonList} />
+        <Route path="/:id" component={Detail} />
+      </Switch>
     </Container>
   );
 }

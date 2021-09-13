@@ -30,3 +30,8 @@ export const Divider = styled.div`
 `;
 
 export const AppName = styled.p``;
+
+export const DetailBox = styled.div`
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+`;

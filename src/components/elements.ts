@@ -63,7 +63,7 @@ export const ButtonListWrap = styled.div`
   align-items: center;
 `;
 
-/* button */
+/* Button */
 
 export const ButtonWrap = styled(Link)`
   background-color: rgba(0, 0, 0, 0.3);
@@ -76,4 +76,41 @@ export const ButtonWrap = styled(Link)`
   border: none;
   gap: 10px;
   text-decoration: none;
+`;
+
+/* Detail */
+
+export const DetailWrap = styled.div`
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 1fr 4fr;
+  margin: 10px;
+  height: 83vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+`;
+
+export const DetailHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+`;
+
+export const DetailTitle = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+export const DetailValue = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+`;
+
+export const DetailContent = styled.div`
+  
 `;
