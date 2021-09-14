@@ -83,19 +83,18 @@ export const ButtonWrap = styled(Link)`
 export const DetailWrap = styled.div`
   display: grid;
   flex-direction: column;
-  grid-template-rows: 1fr 4fr;
-  margin: 10px;
+  grid-template-rows: 1fr 7fr;
   height: 83vh;
   background-color: rgba(0, 0, 0, 0.6);
+  margin: 10px;
   border-radius: 10px;
-  padding: 20px;
+  overflow: hidden;
 `;
 
 export const DetailHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 10vh;
+  margin: 0 60px 0 20px; 
 `;
 
 export const DetailTitle = styled.div`
@@ -108,9 +107,10 @@ export const DetailValue = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 5px;
 `;
 
 export const DetailContent = styled.div`
-  
+  padding: 10px;
 `;
+
+

@@ -4,20 +4,17 @@ import {
   DetailHeader,
   DetailValue,
   DetailContent,
-  Text,
 } from './elements';
-import {IData, MockData} from "../state/mock-data";
+import { IData, MockData } from "../state/mock-data";
 import { useParams } from "react-router-dom";
+import Chart from "./chart";
 
 interface DetailProps {}
 
 const Detail: React.FC<DetailProps> = () => {
   const { id }: { id: string } = useParams();
   const data: IData | any = MockData.find((item) => {
-    if (item.id === id ) {
-      return item;
-    }
-  });
+    if (item.id === id ) return item; });
 
   console.log(data);
 
@@ -34,7 +31,7 @@ const Detail: React.FC<DetailProps> = () => {
         </DetailValue>
       </DetailHeader>
       <DetailContent>
-
+        <Chart />
       </DetailContent>
     </DetailWrap>
   );

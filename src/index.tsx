@@ -24,7 +24,7 @@ const App = () => {
     setScreensaverVisible(true);
     loop();
 
-    function loop() { 
+    function loop() {
       const timeRef = setTimeout(() => {
         setScreensaverActive(false);
         const timeRef2 = setTimeout(() => {
@@ -64,10 +64,10 @@ const App = () => {
       <GlobalStyle />
       <Background />
       <BrowserRouter>
-        {screensaverActive && screensaverVisible ? 
+        {screensaverActive && screensaverVisible ?
           <ScreenSaver onClick={screensaverClicked} />
           :
-          <ScreenMain />  
+          <ScreenMain />
         }
       </BrowserRouter>
     </AppContainer>
