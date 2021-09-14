@@ -2,9 +2,10 @@ import { Line } from "react-chartjs-2";
 
 const Chart: React.FC = () => {
   const data = {
-    labels: ['1', '2', '3', '4', '5', '6'],
+    labels: ['11:15', '11:30', '11:45', '12:00', '12:15', '12: 30'],
     datasets: [
       {
+        label: "Item",
         data: [12, 19, 3, 5, 2, 3],
         fill: false,
         backgroundColor: 'rgb(0, 0, 0)',
@@ -18,7 +19,7 @@ const Chart: React.FC = () => {
       yAxes: [
         {
           ticks: {
-            beginAtZero: true,
+            beginAtZero: false,
           },
         },
       ],

@@ -113,4 +113,31 @@ export const DetailContent = styled.div`
   padding: 10px;
 `;
 
+/* Connect */
 
+export const ConnectWrap = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 2.3em;
+  right: 2em;
+`;
+
+export const LED = styled.div<{ on: string }>`
+  position: relative;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  width: 1em;
+  height: 1em;
+  border: 2px;
+  border-radius: 2.5em;
+
+  ${props => props.on === "on" ? {
+      backgroundImage: "radial-gradient(farthest-corner at 50% 20%, #00c853 0%, #009624 100%)",
+      boxShadow: "0 0.5em 1em #003300"
+    } : {
+      backgroundImage: "radial-gradient(farthest-corner at 50% 20%, #b30000 0%, #330000 100%)",
+      boxShadow: "0 0.5em 1em rgba(102, 0, 0, 0.3)"
+    }
+  }
+`;
