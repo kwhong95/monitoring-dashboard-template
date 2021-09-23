@@ -8,6 +8,8 @@ export interface IData {
   payload: number;
   unit: string;
   Icon: any;
+  path: string;
+  component?: any;
 }
 
 export const MockData: IData[] = [
@@ -17,6 +19,7 @@ export const MockData: IData[] = [
     payload: 37.06,
     unit: "mmAQ",
     Icon: Gauage,
+    path: "/pressure",
   },
   {
     id: "fan",
@@ -24,6 +27,8 @@ export const MockData: IData[] = [
     payload: 13.48,
     unit: "A",
     Icon: BigElecFan,
+    path: "/fan",
+
   },
   {
     id: "blower",
@@ -31,6 +36,7 @@ export const MockData: IData[] = [
     payload: 7.11,
     unit: "A",
     Icon: BigElecFan,
+    path: "/blower"
   },
   {
     id: "temp",
@@ -38,5 +44,6 @@ export const MockData: IData[] = [
     payload: 37.2,
     unit: "˚C",
     Icon: Temp,
+    path: "/temp"
   }
 ]

@@ -17,8 +17,10 @@ export const ItemWrap = styled.div`
   display: grid;
   grid-template-rows: 1fr 2fr;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #1c1c1c;
   border-radius: 10px;
+  max-height: 47vh;
+  overflow: hidden;
 `;
 
 export const Header = styled.div`
@@ -36,21 +38,35 @@ export const TitleWrap = styled.div`
 `;
 
 export const Text = styled.h2`
+  position: relative;
+  top: -1em;
+  left: -5.4em;
+  width: 10em;
   color: #fff;
   margin-top: .3em;
-  font-size: 32px;
+  font-size: 2.5em;
 `;
 
 export const Unit = styled.p`
-  font-size: 30px;
+  position: relative;
+  width: 4.2em;
+  text-align: right;
+  top: -2rem;
+  left: -13em;
+  font-size: 32px;
   font-weight: 600;
   color: gray;
 `;
 
 export const Payload = styled.div`
-  text-align: center;
+  position: relative;
+  width: 2.2em;
+  text-align: right;
+  top: -3rem;
+  left: 4rem;
   font-weight: 700;
-  font-size: 120px;
+  font-size: 100px;
+  z-index: 2;
 `;
 
 
@@ -67,26 +83,34 @@ export const ButtonListWrap = styled.div`
 
 export const ButtonWrap = styled(Link)`
   background-color: rgba(0, 0, 0, 0.3);
-  width: 150px;
-  height: 150px;
+  border-radius: 7%;
+  width: 160px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
-  gap: 10px;
+  gap: 20px;
   text-decoration: none;
+`;
+
+export const ButtonText = styled.h2`
+  color: #fff;
+  font-size: 1.8rem;
 `;
 
 /* Detail */
 
 export const DetailWrap = styled.div`
+  position: relative;
   display: grid;
   flex-direction: column;
   grid-template-rows: 1fr 7fr;
-  height: 83vh;
+  height: 84vh;
   background-color: rgba(0, 0, 0, 0.6);
   margin: 10px;
+  top: 1rem;
   border-radius: 10px;
   overflow: hidden;
 `;
@@ -111,33 +135,4 @@ export const DetailValue = styled.div`
 
 export const DetailContent = styled.div`
   padding: 10px;
-`;
-
-/* Connect */
-
-export const ConnectWrap = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  top: 2.3em;
-  right: 2em;
-`;
-
-export const LED = styled.div<{ on: string }>`
-  position: relative;
-  margin-left: 5px;
-  margin-bottom: 3px;
-  width: 1em;
-  height: 1em;
-  border: 2px;
-  border-radius: 2.5em;
-
-  ${props => props.on === "on" ? {
-      backgroundImage: "radial-gradient(farthest-corner at 50% 20%, #00c853 0%, #009624 100%)",
-      boxShadow: "0 0.5em 1em #003300"
-    } : {
-      backgroundImage: "radial-gradient(farthest-corner at 50% 20%, #b30000 0%, #330000 100%)",
-      boxShadow: "0 0.5em 1em rgba(102, 0, 0, 0.3)"
-    }
-  }
 `;

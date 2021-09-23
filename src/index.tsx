@@ -9,7 +9,7 @@ import ScreenMain from './screen/screen-main';
 import ScreenSaver from './screen/screen-saver';
 
 
-const SCREENSAVER_DELAY_MS = 3000;
+const SCREENSAVER_DELAY_MS = 200000000;
 const SCREENSAVER_ACTIVE_TIME_MS = 10000000000;
 const SCREENSAVER_INACTIVE_TIME_MS = 5000;
 

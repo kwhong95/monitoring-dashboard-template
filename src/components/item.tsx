@@ -19,7 +19,17 @@ const Item: React.FC<ItemProps> = ({ title, payload, unit, Icon }) => {
     <ItemWrap>
       <Header>
         <TitleWrap>
-          <Icon fill="#fff" width="30" height="30" />
+          <Icon 
+            style={{
+              position: "relative",
+              top: "80px",
+              left: "-80px",
+              zIndex: 1,
+            }}
+            fill="#3d3d3d" 
+            width="200" 
+            height="150" 
+          />
           <Text>{title}</Text>
         </TitleWrap>
         <Unit>{unit}</Unit>

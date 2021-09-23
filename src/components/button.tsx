@@ -1,4 +1,4 @@
-import { ButtonWrap, Text } from './elements';
+import { ButtonWrap, ButtonText } from './elements';
 
 interface ButtonProps {
   onClick ?: () => void;
@@ -10,10 +10,10 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ title, Icon, to }) => {
   return (
     <ButtonWrap to={to}>
-      <Icon fill="#fff" width="50" height="50" />
-      <Text>
+      <Icon fill="#c2c2c2" width="80" height="80" />
+      <ButtonText>
         {title}
-      </Text>
+      </ButtonText>
     </ButtonWrap>
   );
 }

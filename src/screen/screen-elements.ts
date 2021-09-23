@@ -16,22 +16,20 @@ export const Container = styled.section`
 
 export const Header = styled.header`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1em;
   gap: 5px;
+  padding: 0 2rem;
 `;
 
 export const CompanyName = styled.h3``;
 
-export const Divider = styled.div`
-  border: 1px solid #fff;
-  width: 10em;
+export const AppName = styled.p`
+  font-size: 1.5rem;
 `;
 
-export const AppName = styled.p``;
-
 export const DetailBox = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
+  background: #101010;
   border-radius: 10px;
 `;

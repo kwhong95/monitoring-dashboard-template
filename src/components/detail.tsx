@@ -22,7 +22,7 @@ const Detail: React.FC<DetailProps> = () => {
     <DetailWrap>
       <DetailHeader>
         <DetailTitle>
-          <data.Icon height="30" width="30" fill="#fff" />
+          <data.Icon height="50" width="50" fill="#363636" />
           <h1 style={{ marginTop: "30px" }}>{data.title}</h1>
         </DetailTitle>
         <DetailValue>
@@ -35,6 +35,6 @@ const Detail: React.FC<DetailProps> = () => {
       </DetailContent>
     </DetailWrap>
   );
-};
+}
 
 export default Detail;
