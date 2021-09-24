@@ -62,10 +62,10 @@ export const Payload = styled.div`
   position: relative;
   width: 2.2em;
   text-align: right;
-  top: -3rem;
+  top: -4rem;
   left: 4rem;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 8em;
   z-index: 2;
 `;
 

@@ -12,9 +12,8 @@ import Chart from "./chart";
 interface DetailProps {}
 
 const Detail: React.FC<DetailProps> = () => {
-  const { id }: { id: string } = useParams();
-  const data: IData | any = MockData.find((item) => {
-    if (item.id === id ) return item; });
+  const { id } : { id: string } = useParams();
+  const data: IData | any = MockData.find((item) => (item.id === id ) && item);
 
   console.log(data);
 

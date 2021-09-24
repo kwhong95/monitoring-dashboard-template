@@ -34,7 +34,7 @@ const Item: React.FC<ItemProps> = ({ title, payload, unit, Icon }) => {
         </TitleWrap>
         <Unit>{unit}</Unit>
       </Header>
-      <Payload>{payload}</Payload>
+      <Payload>{payload.toFixed(1)}</Payload>
     </ItemWrap>
   );
 }
