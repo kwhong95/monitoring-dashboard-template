@@ -6,7 +6,7 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svg/webpack'],
       },
     ],
   },
