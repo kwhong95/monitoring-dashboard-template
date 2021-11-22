@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
+import Container from "../layouts/Container";
+import ScreenSaver from "../components/ScreenSaver";
+import { useScreenSaverState } from "../contexts/ScreenSaverContext";
 
 const Router = () => {
   const [current, setCurrent] = useState<string>("home");
@@ -17,15 +20,15 @@ const Router = () => {
   }, []);
 
   return (
-    <div>
-      {/* Nav - current setup */}
+    <Container current={current}>
+      <ScreenSaver />
       <HashRouter>
         <Switch>
           {/* <Route /> */}
           {/* <Route /> */}
         </Switch>
       </HashRouter>
-    </div>
+    </Container>
   );
 };
 

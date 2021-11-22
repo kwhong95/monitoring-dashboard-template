@@ -1,9 +1,10 @@
 import { ScreenSaverContextProvider } from "../contexts/ScreenSaverContext";
+import Router from "../router/Router";
 
 const App = () => {
   return (
     <ScreenSaverContextProvider>
-      <h1>App Layout</h1>
+      <Router />
     </ScreenSaverContextProvider>
   );
 };

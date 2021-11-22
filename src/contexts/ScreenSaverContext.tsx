@@ -2,10 +2,7 @@ import { createContext, Dispatch, useContext, useReducer } from "react";
 
 export type ScreenSaverInfo = {
   active: boolean;
-  visible: boolean;
-  delayTime: number;
-  activeTime: number;
-  inactiveTime: number;
+  wate_time: number;
 };
 
 const ScreenSaverContext = createContext<ScreenSaverInfo | undefined>(
@@ -14,10 +11,7 @@ const ScreenSaverContext = createContext<ScreenSaverInfo | undefined>(
 
 type Action =
   | { type: "SET_ACTIVE"; active: boolean }
-  | { type: "SET_VISIBLE"; visible: boolean }
-  | { type: "SET_DELAY_TIME"; delayTime: number }
-  | { type: "SET_ACTIVE_TIME"; activeTime: number }
-  | { type: "SET_INACTIVE_TIME"; inactiveTime: number };
+  | { type: "SET_WATE_TIME"; wait_time: number };
 
 type ScreenSaverDispatch = Dispatch<Action>;
 
@@ -31,26 +25,17 @@ const ScreenSaverReducer = (
 ): ScreenSaverInfo => {
   switch (action.type) {
     case "SET_ACTIVE":
-      return { ...state, active: true };
-    case "SET_VISIBLE":
-      return { ...state, visible: true };
-    case "SET_DELAY_TIME":
-      return { ...state, delayTime: action.delayTime };
-    case "SET_ACTIVE_TIME":
-      return { ...state, activeTime: action.activeTime };
-    case "SET_INACTIVE_TIME":
-      return { ...state, inactiveTime: action.inactiveTime };
+      return { ...state, active: action.active };
+    case "SET_WATE_TIME":
+      return { ...state, wate_time: action.wait_time };
     default:
       throw new Error("잘못된 동작입니다!");
   }
 };
 
 const initialState: ScreenSaverInfo = {
-  active: false,
-  visible: false,
-  delayTime: 3000,
-  activeTime: Infinity,
-  inactiveTime: 5000,
+  active: true,
+  wate_time: 5000,
 };
 
 export const ScreenSaverContextProvider = ({
