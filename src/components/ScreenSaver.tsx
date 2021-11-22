@@ -1,17 +1,9 @@
 import { useCallback } from "react";
-import styled from "@emotion/styled";
 import {
   useScreenSaverState,
   useScreenSaverDispatch,
 } from "../contexts/ScreenSaverContext";
-
-interface State {
-  active: boolean;
-}
-
-const Container = styled("div")<State>`
-  display: ${(props) => (props.active ? "flex" : "none")};
-`;
+import { Container } from "../styles/screenSaverStyles";
 
 const ScreenSaver: React.FC = () => {
   const { active, wate_time } = useScreenSaverState();
@@ -22,8 +14,9 @@ const ScreenSaver: React.FC = () => {
       type: "SET_ACTIVE",
       active: false,
     });
+
     startTimeOut();
-  }, [dispatch]);
+  }, []);
 
   const startTimeOut = useCallback(() => {
     const waitTimeOut = setTimeout(() => {

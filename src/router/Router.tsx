@@ -1,8 +1,6 @@
-import { useState, useEffect, useRef } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { HashRouter, Switch } from "react-router-dom";
 import Container from "../layouts/Container";
-import ScreenSaver from "../components/ScreenSaver";
-import { useScreenSaverState } from "../contexts/ScreenSaverContext";
 
 const Router = () => {
   const [current, setCurrent] = useState<string>("home");
@@ -21,9 +19,9 @@ const Router = () => {
 
   return (
     <Container current={current}>
-      <ScreenSaver />
       <HashRouter>
         <Switch>
+          <h1>Main</h1>
           {/* <Route /> */}
           {/* <Route /> */}
         </Switch>
