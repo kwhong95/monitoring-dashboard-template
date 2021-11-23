@@ -1,20 +1,21 @@
-import { MockData } from '../state/mock-data';
-import { ItemListWrap } from './elements';
-import Item from './item';
+import { MockData } from "../state/mock-data";
+import { ItemListWrap } from "./elements";
+import Item from "./item";
 
 const ItemList: React.FC = () => {
-  return(
+  return (
     <ItemListWrap>
-      {MockData.map((item, idx) =>
-       <Item 
-        key={idx} 
-        title={item.title}
-        payload={item.payload}
-        unit={item.unit} 
-        Icon={item.Icon}
-       />)}
+      {MockData.map((item, idx) => (
+        <Item
+          key={idx}
+          title={item.title}
+          payload={item.payload}
+          unit={item.unit}
+          Icon={item.Icon}
+        />
+      ))}
     </ItemListWrap>
   );
-}
+};
 
 export default ItemList;

@@ -9,4 +9,5 @@ declare module '@emotion/react' {
 interface Colors {
   bgColor: string
   fontColor: string
+  cardBgColor: string
 }

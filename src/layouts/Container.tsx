@@ -7,11 +7,11 @@ interface Props {
 
 const StyledContainer = styled("div")<{ active: boolean }>`
   ${(props) => ({
-    height: "100vh",
     background: props.theme.colors.bgColor,
     color: props.theme.colors.fontColor,
     display: props.active ? "none" : "flex",
   })}
+  height: 100vh;
 `;
 
 const Container: React.FC<Props> = ({ children }) => {

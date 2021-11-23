@@ -4,6 +4,7 @@ import {
   useScreenSaverDispatch,
 } from "../contexts/ScreenSaverContext";
 import { Container } from "../styles/screenSaverStyles";
+import ItemList from "./CardList";
 
 const ScreenSaver: React.FC = () => {
   const { active, wate_time } = useScreenSaverState();
@@ -31,7 +32,7 @@ const ScreenSaver: React.FC = () => {
 
   return (
     <Container active={active} onClick={screenSaverClicked}>
-      <h1>ScreenSaver View</h1>
+      <ItemList />
     </Container>
   );
 };

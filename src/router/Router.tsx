@@ -21,7 +21,6 @@ const Router = () => {
     <Container current={current}>
       <HashRouter>
         <Switch>
-          <h1>Main</h1>
           {/* <Route /> */}
           {/* <Route /> */}
         </Switch>

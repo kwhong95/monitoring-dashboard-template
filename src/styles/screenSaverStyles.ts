@@ -5,5 +5,10 @@ interface Active {
 }
 
 export const Container = styled("div")<Active>`
-  display: ${(props) => (props.active ? "flex" : "none")};
+  ${(props) => ({
+    display: props.active ? "flex" : "none",
+    background: props.theme.colors.bgColor,
+    color: props.theme.colors.fontColor
+  })};
+  height: 100vh;
 `;
