@@ -1,8 +1,11 @@
-import { Container } from "../styles/ItemStyles";
+import { useScreenSaverState } from "../contexts/ScreenSaverContext";
+import { Container } from "../styles/cardStyles";
 
-const ItemList: React.FC = () => {
+const CardList: React.FC = () => {
+  const { active } = useScreenSaverState();
+
   return (
-    <Container>
+    <Container active={active}>
       <div className="item">
         <p>Title</p>
         <p>Payload</p>
@@ -14,4 +17,4 @@ const ItemList: React.FC = () => {
   );
 };
 
-export default ItemList;
+export default CardList;

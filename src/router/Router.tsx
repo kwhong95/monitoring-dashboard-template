@@ -1,31 +1,20 @@
-import { useState, useEffect } from "react";
-import { HashRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Container from "../layouts/Container";
 
+/* Components */
+import Main from "../components/Main";
+import ScreenSaver from "../components/ScreenSaver";
+
 const Router = () => {
-  const [current, setCurrent] = useState<string>("home");
-
-  const setRoute = () => {
-    const location = window.location.href.split("/");
-    const pathname = location[location.length - 1];
-    setCurrent(pathname ? pathname : "home");
-  };
-
-  useEffect(() => {
-    window.addEventListener("hashchange", setRoute);
-
-    return () => window.removeEventListener("hashchange", setRoute);
-  }, []);
-
   return (
-    <Container current={current}>
-      <HashRouter>
+    <BrowserRouter>
+      <Container>
+        <ScreenSaver />
         <Switch>
-          {/* <Route /> */}
-          {/* <Route /> */}
+          <Route path="/" component={Main} />
         </Switch>
-      </HashRouter>
-    </Container>
+      </Container>
+    </BrowserRouter>
   );
 };
 

@@ -1,7 +1,11 @@
 import styled from '@emotion/styled'
 
-export const Container = styled('div')`
-  display: grid;
+interface Active {
+  active: boolean;
+}
+
+export const Container = styled('div')<Active>`
+  display: ${props => props.active ? 'grid' : 'none'};
   grid-template-columns: 1fr 1fr;
   padding: 10px;
   height: 100vh;

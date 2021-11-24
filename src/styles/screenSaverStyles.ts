@@ -1,14 +1,6 @@
 import styled from '@emotion/styled'
 
-interface Active {
-  active: boolean;
-}
-
-export const Container = styled("div")<Active>`
-  ${(props) => ({
-    display: props.active ? "flex" : "none",
-    background: props.theme.colors.bgColor,
-    color: props.theme.colors.fontColor
-  })};
+export const Container = styled("div")<{ active: boolean }>`
+  display: ${props => props.active ? 'flex' : 'none'};
   height: 100vh;
 `;

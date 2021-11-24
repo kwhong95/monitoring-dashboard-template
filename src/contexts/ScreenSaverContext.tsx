@@ -25,6 +25,7 @@ const ScreenSaverReducer = (
 ): ScreenSaverInfo => {
   switch (action.type) {
     case "SET_ACTIVE":
+      console.log("화면보호기 활성상태가 변경되었습니다.");
       return { ...state, active: action.active };
     case "SET_WATE_TIME":
       return { ...state, wate_time: action.wait_time };
