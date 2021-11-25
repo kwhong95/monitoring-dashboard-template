@@ -5,7 +5,7 @@ import Container from "../layouts/Container";
 import Navigation from "../layouts/Navigation";
 
 /* Components */
-import Main from "../components/Main";
+import Main from "../layouts/Main";
 
 const Router = () => {
   return (

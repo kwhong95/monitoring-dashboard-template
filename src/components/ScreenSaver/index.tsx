@@ -1,5 +1,5 @@
-import { Container } from "../styles/screenSaverStyles";
-import CardList from "./CardList";
+import { Container } from "./styles";
+import CardList from "../Card";
 
 interface Props {
   onClick: () => void;

@@ -1,4 +1,4 @@
-import { Container } from "../styles/cardStyles";
+import { Container } from "./styles";
 
 const CardList: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import { Container } from "../../styles/itemStyles";
+import { Container } from "./styles";
 
 const ItemList: React.FC = () => {
   return (

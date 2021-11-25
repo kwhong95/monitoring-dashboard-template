@@ -1,11 +1,14 @@
 import { createContext } from "react";
+import { ModalOwnProps, ModalType } from "../components/Modal/types";
 
-type OpenModalPayload = {
-  type: string;
-  props: any;
+type OpenModalPayload<T extends ModalType> = {
+  type: T;
+  props: ModalOwnProps<T>;
 };
 
-export type EnhancedModalPayload = OpenModalPayload & { id: string };
+export type EnhancedModalPayload<T extends ModalType> = OpenModalPayload<T> & {
+  id: string;
+};
 
 type ModalContextType = {
   openModal: () => void;
