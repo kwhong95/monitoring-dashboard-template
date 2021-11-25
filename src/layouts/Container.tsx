@@ -12,7 +12,7 @@ const Container: React.FC = ({ children }) => {
   const countTimeout = useRef<NodeJS.Timeout | undefined>();
 
   const activeScreenSaver = useCallback(() => {
-    dispatch({ type: "SET_ACTIVE", active: true });
+    dispatch({ type: "@screensaver/ACTIVE", active: true });
   }, [dispatch]);
 
   const startTimeout = useCallback(() => {
@@ -28,7 +28,7 @@ const Container: React.FC = ({ children }) => {
   }, [activeScreenSaver]);
 
   const screensaverClicked = useCallback(() => {
-    dispatch({ type: "SET_ACTIVE", active: false });
+    dispatch({ type: "@screensaver/ACTIVE", active: false });
     startTimeout();
   }, [dispatch, startTimeout]);
 

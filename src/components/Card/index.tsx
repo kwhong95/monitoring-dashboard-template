@@ -1,11 +1,8 @@
-import { useScreenSaverState } from "../contexts/ScreenSaverContext";
 import { Container } from "../styles/cardStyles";
 
 const CardList: React.FC = () => {
-  const { active } = useScreenSaverState();
-
   return (
-    <Container active={active}>
+    <Container>
       <div className="item">
         <p>Title</p>
         <p>Payload</p>

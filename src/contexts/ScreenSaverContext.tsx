@@ -10,8 +10,8 @@ const ScreenSaverContext = createContext<ScreenSaverInfo | undefined>(
 );
 
 type Action =
-  | { type: "SET_ACTIVE"; active: boolean }
-  | { type: "SET_WATE_TIME"; wait_time: number };
+  | { type: "@screensaver/ACTIVE"; active: boolean }
+  | { type: "@screensaver/WATE_TIME"; wait_time: number };
 
 type ScreenSaverDispatch = Dispatch<Action>;
 
@@ -24,10 +24,9 @@ const ScreenSaverReducer = (
   action: Action
 ): ScreenSaverInfo => {
   switch (action.type) {
-    case "SET_ACTIVE":
-      console.log("화면보호기 활성상태가 변경되었습니다.");
+    case "@screensaver/ACTIVE":
       return { ...state, active: action.active };
-    case "SET_WATE_TIME":
+    case "@screensaver/WATE_TIME":
       return { ...state, wait_time: action.wait_time };
     default:
       throw new Error("잘못된 동작입니다!");
