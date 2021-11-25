@@ -2,7 +2,7 @@ import { createContext, Dispatch, useContext, useReducer } from "react";
 
 export type ScreenSaverInfo = {
   active: boolean;
-  wate_time: number;
+  wait_time: number;
 };
 
 const ScreenSaverContext = createContext<ScreenSaverInfo | undefined>(
@@ -28,7 +28,7 @@ const ScreenSaverReducer = (
       console.log("화면보호기 활성상태가 변경되었습니다.");
       return { ...state, active: action.active };
     case "SET_WATE_TIME":
-      return { ...state, wate_time: action.wait_time };
+      return { ...state, wait_time: action.wait_time };
     default:
       throw new Error("잘못된 동작입니다!");
   }
@@ -36,7 +36,7 @@ const ScreenSaverReducer = (
 
 const initialState: ScreenSaverInfo = {
   active: true,
-  wate_time: 5000,
+  wait_time: 5000,
 };
 
 export const ScreenSaverContextProvider = ({

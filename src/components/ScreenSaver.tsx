@@ -1,37 +1,16 @@
-import { useCallback } from "react";
-import {
-  useScreenSaverState,
-  useScreenSaverDispatch,
-} from "../contexts/ScreenSaverContext";
+import { useScreenSaverState } from "../contexts/ScreenSaverContext";
 import { Container } from "../styles/screenSaverStyles";
 import CardList from "./CardList";
 
-const ScreenSaver: React.FC = () => {
-  const { active, wate_time } = useScreenSaverState();
-  const dispatch = useScreenSaverDispatch();
+interface Props {
+  onClick: () => void;
+}
 
-  const screenSaverClicked = useCallback(() => {
-    dispatch({
-      type: "SET_ACTIVE",
-      active: false,
-    });
-
-    startTimeOut();
-  }, []);
-
-  const startTimeOut = useCallback(() => {
-    const waitTimeOut = setTimeout(() => {
-      dispatch({
-        type: "SET_ACTIVE",
-        active: true,
-      });
-    }, wate_time);
-
-    return waitTimeOut;
-  }, [wate_time, dispatch]);
+const ScreenSaver: React.FC<Props> = ({ onClick }) => {
+  const { active } = useScreenSaverState();
 
   return (
-    <Container onClick={screenSaverClicked} active={active}>
+    <Container active={active} onClick={onClick}>
       <CardList />
     </Container>
   );
