@@ -1,9 +1,19 @@
 import { Conatiner } from "../styles/navStyles";
+import { useModal } from "../contexts/ModalContext";
 
 const Nav: React.FC = () => {
+  const { openModal } = useModal();
+
+  const openSetting = () => {
+    openModal({
+      type: "Setting",
+      props: { title: "Setting" },
+    });
+  };
+
   return (
     <Conatiner>
-      <p>(주)잉클</p>
+      <button onClick={openSetting}>Setting</button>
       <p>도장부스 모니터링</p>
       <p>Connected</p>
     </Conatiner>

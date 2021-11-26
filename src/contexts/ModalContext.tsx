@@ -1,18 +1,27 @@
-import { createContext, Dispatch, useContext, useReducer } from "react";
+import React, { createContext, Dispatch, useContext, useReducer } from "react";
 import { ModalOwnProps, ModalType } from "../components/Modal/types";
+import ModalContainer from "../components/Modal/Conatiner";
 
 type OpenModalPayload<T extends ModalType> = {
   type: T;
   props: ModalOwnProps<T>;
+  overlayOptions?: OverlayOptions;
 };
 
 export type EnhancedModalPayload<T extends ModalType> = OpenModalPayload<T> & {
   id: string;
 };
 
+export interface OverlayOptions {
+  dim?: boolean | string;
+  closeDelay?: number;
+  closeOverlayClick?: boolean;
+  preventScroll?: boolean;
+}
+
 type ModalContextType = {
-  openModal: () => void;
-  closeModal: () => void;
+  openModal: <T extends ModalType>(payload: OpenModalPayload<T>) => void;
+  closeModal: (payload: { id: string }) => void;
   closeAll: () => void;
 };
 
@@ -70,27 +79,25 @@ function bindActionCreator<A, C extends ActionCreator<A>>(
   return (...args: Parameters<C>) => dispatch(actionCreator(...args));
 }
 
-const withModal = <P,>(Component: React.ComponentType<P>) => {
-  const WithModal = (props: P) => {
-    const [openModals, dispatch] = useReducer(reducer, []);
-    const modalActions = {
-      openModal: bindActionCreator(openModal, dispatch),
-      closeModal: bindActionCreator(closeModal, dispatch),
-      closeAll: bindActionCreator(closeModal, dispatch),
-    };
-
-    return (
-      <ModalContext.Provider value={modalActions}>
-        <Component {...props} />
-        {/* <ModalConatiner openModals={openModals} /> */}
-      </ModalContext.Provider>
-    );
+export const ModalContextProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [openedModals, dispatch] = useReducer(reducer, []);
+  const modalActions = {
+    openModal: bindActionCreator(openModal, dispatch),
+    closeModal: bindActionCreator(closeModal, dispatch),
+    closeAll: bindActionCreator(closeAll, dispatch),
   };
 
-  return WithModal;
+  return (
+    <ModalContext.Provider value={modalActions}>
+      <ModalContainer openedModals={openedModals} />
+      {children}
+    </ModalContext.Provider>
+  );
 };
-
-export default withModal;
 
 export const useModal = () => {
   return useContext(ModalContext);
