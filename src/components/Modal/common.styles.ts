@@ -1,11 +1,33 @@
 import styled from '@emotion/styled'
 
 export const Title = styled('div')`
-  display: flex;   
+  font-weight: 700;
+`
+
+export const Body = styled('div')`
+  position: relative;
+  padding: 20px 30px;
+  text-align: right;
+  white-space: center;
+  overflow-y: auto;
+`
+
+export const ItemBody = styled('div')`
+  position: relative;
+`
+
+export const ItemTitle = styled('div')`
+  font-weight: 500;
+`
+
+export const ItemProps = styled('div')`
+
 `
 
 export const Modal = styled('div')`
   position: relative;
+  color: white;
+  padding: 20px;
   width: 100%;
   max-width: 24rem;
   max-height: 70vh;

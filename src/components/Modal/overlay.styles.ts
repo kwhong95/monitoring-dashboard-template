@@ -10,6 +10,13 @@ export const OVERLAY = 1000
 
 export const Overlay = styled('div')<{ dim: boolean | string, visible: boolean }>`
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: ${OVERLAY};
 
   background: ${(props) => props.dim && dimmedBackground(props.dim)};
