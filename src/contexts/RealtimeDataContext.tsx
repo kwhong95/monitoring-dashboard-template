@@ -16,7 +16,7 @@ export const RealtimeDataContextProvider = ({
   const [rtdata, updateRtdata] = useState([]);
   const baseUrl = "http://3.34.87.77:8888/api";
 
-  const { data } = useAxiosFetch(`${baseUrl}/profile`);
+  const { data } = useAxiosFetch(`${baseUrl}/profile`, `${baseUrl}/data`);
 
   useEffect(() => {
     updateRtdata(data);
