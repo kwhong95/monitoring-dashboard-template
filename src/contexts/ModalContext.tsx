@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, useContext, useReducer } from "react";
+import { createContext, Dispatch, useContext, useReducer } from "react";
 import { ModalOwnProps, ModalType } from "../components/Modal/types";
 import ModalContainer from "../components/Modal/Conatiner";
 

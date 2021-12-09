@@ -4,7 +4,7 @@ const CardList: React.FC = () => {
   return (
     <Container>
       <div className="item">
-        <p>Title</p>
+        <p>d</p>
         <p>Payload</p>
       </div>
       <div className="item">2</div>

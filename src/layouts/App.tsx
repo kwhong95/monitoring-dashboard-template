@@ -1,5 +1,6 @@
 import { ScreenSaverContextProvider } from "../contexts/ScreenSaverContext";
 import { ModalContextProvider } from "../contexts/ModalContext";
+import { RealtimeDataContextProvider } from "contexts/RealtimeDataContext";
 import Router from "../router/Router";
 import { dark } from "../styles/theme";
 import { ThemeProvider, Global } from "@emotion/react";
@@ -9,10 +10,12 @@ const App = () => {
   return (
     <ScreenSaverContextProvider>
       <ModalContextProvider>
-        <ThemeProvider theme={dark}>
-          <Global styles={globalStyles} />
-          <Router />
-        </ThemeProvider>
+        <RealtimeDataContextProvider>
+          <ThemeProvider theme={dark}>
+            <Global styles={globalStyles} />
+            <Router />
+          </ThemeProvider>
+        </RealtimeDataContextProvider>
       </ModalContextProvider>
     </ScreenSaverContextProvider>
   );
